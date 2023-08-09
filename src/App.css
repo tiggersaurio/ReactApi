@@ -1,0 +1,192 @@
+.tarjeta{
+  border-radius: 8%;
+  position: relative; /* Establecer como posición relativa para poder usar posicionamiento */
+  width: 14rem;
+  height: 12rem;
+  border: none;
+  margin-bottom: 25px;
+}
+
+
+.imagen_card {
+  height: 25%;
+  border-radius: 8%;
+}
+
+.imagen{
+  border-radius: 8%;
+}
+
+body{
+  background-color: #0d1323;
+  font-family: 'Rubik', sans-serif;
+  color: white;
+}
+
+.contenido_tarjeta{
+  border-radius: 8%;
+  background-color: #1d204b;
+  border-radius: 8%;
+  position: absolute; /* Establecer como posición absoluta para que se pueda superponer */
+  bottom: -10px; /* Ajustar el valor según el grado de superposición que desees */
+  height: calc(100% - 25px); /* Ajustar la altura para dejar espacio para la superposición */
+  left: 0;
+  right: 0;
+  padding: 25px;
+}
+
+.contenido_tarjeta:hover {
+  background-color: #34397b; /* Color de fondo al hacer hoover */
+  /* Agrega otros estilos de hoover según tus preferencias */
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.titulo{
+  font-size: 18px;
+  display: inline-block;
+}
+
+.elipsis{
+  float: right;
+  margin-bottom: 15px;
+  color: #a2a3d9;
+}
+
+.elipsis:hover{
+  color: white;
+}
+
+.time {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.contenido_p{
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.tarjeta_principal{
+  border-radius: 8%;
+  width: 14rem;
+  height: 96.5%;
+  border: none;
+  background-color:  #1d204b;
+}
+
+.name_report{
+  height: 72%;
+  position: relative; /* Establecer como posición relativa para poder usar posicionamiento */
+  border-radius: 8%;
+  background-color: #5746ea;
+  padding: 25px;
+}
+
+.report{
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 22px;
+}
+
+.contenido_report{
+  font-size: 14px;
+  font-weight: 200;
+  opacity: 0.5;
+  margin-top: 10px;
+}
+
+.contenido_report:hover {
+  opacity: 1;
+  font-size: 16px;
+}
+
+.image_profile{
+  border: 3px solid white; 
+  border-radius: 50%; 
+  margin-bottom: 18%;
+}
+
+.user_name{
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 85px;
+}
+
+.my-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.my-button:hover {
+  background-color: #0056b3;
+}
+
+@media(max-width: 500px) {
+  .container{
+      display: initial;
+  }
+  .col {
+      display: flex;
+      justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .tarjeta_principal {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .report {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .contenido_report {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      margin-top: 0px;
+  }
+
+  .name_report{
+      display: flex;
+      flex-direction: row;
+      font-size: medium;
+      padding: 9px;
+  }
+
+  .user_name{
+      font-size: medium;
+  }
+
+  .image_profile{
+      margin-right: 15px;
+      margin-bottom: 0px;
+  }
+  
+  .info_profile{
+      margin-top: 12px;
+  }
+
+  .col1{
+      margin-top: 10px; /*Espacio entre los dos primeros cuadros*/
+  }
+}
