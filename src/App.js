@@ -1,5 +1,5 @@
 import './App.css';
-import {Card} from './components/Card';
+import { Card } from './components/Card';
 import imagenProfile from './images/image-jeremy.png';
 import { useFetch } from './useFetch';
 import { useEffect, useState } from 'react';
@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const { data } = useFetch({urlAPI: 'https://jsonplaceholder.typicode.com/users'});
+  const { data } = useFetch({ urlAPI: 'https://jsonplaceholder.typicode.com/users' });
 
   const [limitedData, setLimitedData] = useState(data ? data.slice(0, 6) : []);
 
@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-lg-3 col-md-12 col-sm-12 mx-auto">
+        <div className="col-lg-3 col-md-12 col-sm-12 mx-auto col_principal">
           <div className="card tarjeta_principal " style={{ maxHeight: `417px` }}>
             <div className="card name_report">
               <div>
@@ -52,9 +52,9 @@ function App() {
               <h6 className="user_name">{data[8].name}</h6>
             </div>
             <div className="card-body report">
-              <a href="" className="contenido_report"> Daily</a> <br/>
-              <a href="" className="contenido_report"> Weekly</a> <br/>
-              <a href="" className="contenido_report"> Monthly</a>
+              <a href={window.location.href} className="contenido_report"> Daily</a><br />
+              <a href={window.location.href}className="contenido_report"> Weekly</a><br />
+              <a href={window.location.href} className="contenido_report"> Monthly</a>
             </div>
           </div>
         </div>
@@ -68,11 +68,19 @@ function App() {
             ))}
           </div>
         </div>
-        <button className="my-button p-3" onClick={loadMoreRandomData}>
-            Cargar más datos al azar
-          </button>
+        <div className="col-lg-12 col-md-12 col-sm-12 button">
+          <div className="row">
+            <button className="my_button p-3" onClick={loadMoreRandomData}>
+              Cargar más datos al azar
+            </button>
+          </div>
+        </div>
       </div>
     </div>
+
+
+
+
   );
 }
 

@@ -1,6 +1,6 @@
 .tarjeta{
   border-radius: 8%;
-  position: relative; /* Establecer como posición relativa para poder usar posicionamiento */
+  position: relative;
   width: 14rem;
   height: 12rem;
   border: none;
@@ -26,18 +26,16 @@ body{
 .contenido_tarjeta{
   border-radius: 8%;
   background-color: #1d204b;
-  border-radius: 8%;
-  position: absolute; /* Establecer como posición absoluta para que se pueda superponer */
-  bottom: -10px; /* Ajustar el valor según el grado de superposición que desees */
-  height: calc(100% - 25px); /* Ajustar la altura para dejar espacio para la superposición */
+  position: absolute;
+  bottom: -10px; 
+  height: calc(100% - 25px); 
   left: 0;
   right: 0;
   padding: 25px;
 }
 
 .contenido_tarjeta:hover {
-  background-color: #34397b; /* Color de fondo al hacer hoover */
-  /* Agrega otros estilos de hoover según tus preferencias */
+  background-color: #34397b; 
 }
 
 a{
@@ -71,7 +69,7 @@ a{
 }
 
 .tarjeta_principal{
-  border-radius: 8%;
+  border-radius: 15px;
   width: 14rem;
   height: 96.5%;
   border: none;
@@ -80,11 +78,11 @@ a{
 
 .name_report{
   height: 72%;
-  position: relative; /* Establecer como posición relativa para poder usar posicionamiento */
   border-radius: 8%;
   background-color: #5746ea;
   padding: 25px;
 }
+
 
 .report{
   padding-left: 25px;
@@ -123,19 +121,24 @@ a{
   padding: 85px;
 }
 
-.my-button {
-  background-color: #007bff;
+.button{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.my_button {
+  background-color: #1d204b;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
-.my-button:hover {
-  background-color: #0056b3;
+.my_button:hover {
+  background-color: #070711;
 }
 
 @media(max-width: 500px) {
@@ -152,6 +155,16 @@ a{
   .tarjeta_principal {
       flex-direction: column;
       align-items: center;
+      margin: auto;   
+  }
+
+  .tarjeta{
+      margin: auto;
+      margin-bottom: 25px;
+  }
+
+  .col_principal{
+    margin-bottom: 10px;
   }
 
   .report {
